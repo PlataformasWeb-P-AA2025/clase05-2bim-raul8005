@@ -91,7 +91,9 @@ def crear_estudiante(request):
     return render(request, 'crearEstudiante.html', diccionario)
 
 
-@login_required(login_url='/entrando/login/')
+#@ login_required(login_url='/entrando/login/')
+# Django usara la url de inicio se sesion por defecto, por eso no es neceario agregar la ruta
+@login_required
 @permission_required('administrativo.change_estudiante',)
 def editar_estudiante(request, id):
     """
@@ -109,7 +111,8 @@ def editar_estudiante(request, id):
 
     return render(request, 'editarEstudiante.html', diccionario)
 
-
+@login_required
+@permission_required('administrativo.delete_estudiante',)
 def eliminar_estudiante(request, id):
     """
     """
@@ -123,6 +126,8 @@ def en_grupo(nombre):
     def predicate(user):
         return user.groups.filter(name=nombre).exists()
     return user_passes_test(predicate)
+
+
 
 @en_grupo('supervisor')
 def crear_numero_telefonico(request):
