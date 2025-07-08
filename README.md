@@ -27,3 +27,12 @@
 2.1 settings.py
 
 2.2 templates
+
+
+IMAGENES DE LA PRACTICA
+
+![Captura desde 2025-07-08 09-59-51](https://github.com/user-attachments/assets/932af492-d72b-406f-aea4-30e4e670e537)
+
+
+![image](https://github.com/user-attachments/assets/a54ec2ad-99d8-497a-8228-d0872fc37344)
+
